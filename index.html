@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifar - Modern Italian Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>SIFAR</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to SIFAR</h1>
+            <p>Experience Authentic Italian Cuisine</p>
+            <button class="btn btn-primary" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'})">
+                Explore Menu
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Sifar, we bring you the finest Italian culinary traditions with a modern twist. Our chefs carefully select the freshest ingredients to create dishes that transport you straight to Italy.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pasta">Pasta</button>
+                <button class="filter-btn" data-filter="pizza">Pizza</button>
+                <button class="filter-btn" data-filter="dessert">Desserts</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Pasta Section -->
+                <div class="menu-item" data-category="pasta">
+                    <div class="item-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>Creamy sauce with bacon and parmesan</p>
+                    <span class="price">$16.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pasta">
+                    <div class="item-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Fettuccine Alfredo</h3>
+                    <p>Rich and smooth cream sauce with fresh parmesan</p>
+                    <span class="price">$15.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pasta">
+                    <div class="item-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Penne Arrabbiata</h3>
+                    <p>Spicy tomato sauce with garlic and chili</p>
+                    <span class="price">$14.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pasta">
+                    <div class="item-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Lasagna Bolognese</h3>
+                    <p>Layered pasta with meat sauce and béchamel</p>
+                    <span class="price">$17.99</span>
+                </div>
+
+                <!-- Pizza Section -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Margherita</h3>
+                    <p>Fresh mozzarella, tomato, and basil</p>
+                    <span class="price">$12.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Pepperoni</h3>
+                    <p>Classic pizza with fresh pepperoni</p>
+                    <span class="price">$13.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Quattro Formaggi</h3>
+                    <p>Four cheese blend for cheese lovers</p>
+                    <span class="price">$15.99</span>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Vegetarian</h3>
+                    <p>Fresh vegetables and herbs</p>
+                    <span class="price">$11.99</span>
+                </div>
+
+                <!-- Desserts Section -->
+                <div class="menu-item" data-category="dessert">
+                    <div class="item-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Tiramisu</h3>
+                    <p>Creamy mascarpone with espresso</p>
+                    <span class="price">$7.99</span>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="item-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Panna Cotta</h3>
+                    <p>Silky vanilla cream with berry sauce</p>
+                    <span class="price">$6.99</span>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="item-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Gelato</h3>
+                    <p>Assorted Italian gelato flavors</p>
+                    <span class="price">$5.99</span>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="item-image">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>Cannoli</h3>
+                    <p>Crispy shells filled with ricotta cream</p>
+                    <span class="price">$4.99</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Italian Street, Food City, FC 12345</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>hello@sifar.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hours</h3>
+                    <p>Mon-Sun: 11:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sifar Restaurant. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
